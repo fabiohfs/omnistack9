@@ -1,10 +1,6 @@
 import React, { useState, useEffect } from 'react';
-<<<<<<< HEAD
 import socketio from 'socket.io-client';
 import { Alert, SafeAreaView, ScrollView, StyleSheet, Image, Text, AsyncStorage } from 'react-native';
-=======
-import { SafeAreaView, ScrollView, StyleSheet, Image, Text, AsyncStorage } from 'react-native';
->>>>>>> 1da62720e856eafa9db084c49cc023c2d55a9af4
 
 import SpotList from '../components/SpotList';
 
@@ -14,7 +10,6 @@ export default function List() {
     const [techs, setTechs] = useState([]);
 
     useEffect(() => {
-<<<<<<< HEAD
         AsyncStorage.getItem('user').then(user_id => {
             const socket = socketio('url do expo', {
                 query: { user_id }
@@ -27,8 +22,6 @@ export default function List() {
     }, []);
 
     useEffect(() => {
-=======
->>>>>>> 1da62720e856eafa9db084c49cc023c2d55a9af4
         AsyncStorage.getItem('techs').then(storagedTechs => {
             const techsArray = storagedTechs.split(',').map(tech => tech.trim());
 
